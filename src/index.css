@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  --page: #f7f6f2;
+  --paper: #ffffff;
+  --ink: #0b0b0b;
+  --muted: #6b6861;
+  --line: rgba(24, 23, 22, 0.12);
+  --soft: #eeeeea;
+  --accent: #8f2024;
+  --accent-soft: rgba(143, 32, 36, 0.1);
+  --sage: #bab6ad;
+  --nav-bg: rgba(247, 246, 242, 0.86);
+  --hero-bg:
+    linear-gradient(115deg, rgba(247, 246, 242, 0.98) 0%, rgba(237, 235, 229, 0.94) 54%, rgba(255, 255, 255, 0.92) 100%);
+  --promo: linear-gradient(135deg, #050505 0%, #1b1b1b 54%, #8f2024 100%);
+}
+
+.dark {
+  --page: #080808;
+  --paper: #121212;
+  --ink: #f7f6f2;
+  --muted: #b8b4ac;
+  --line: rgba(248, 243, 234, 0.13);
+  --soft: #161616;
+  --accent: #c8454b;
+  --accent-soft: rgba(200, 69, 75, 0.16);
+  --sage: #302f2c;
+  --nav-bg: rgba(8, 8, 8, 0.86);
+  --hero-bg:
+    linear-gradient(115deg, rgba(8, 8, 8, 0.98) 0%, rgba(20, 20, 20, 0.96) 52%, rgba(42, 39, 34, 0.9) 100%);
+  --promo: linear-gradient(135deg, #000000 0%, #181818 56%, #7c1c20 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Archivo", sans-serif;
+}
+
+[dir="rtl"] body,
+[dir="rtl"] button,
+[dir="rtl"] input {
+  font-family: "Noto Kufi Arabic", "Archivo", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.font-display {
+  font-family: "Bodoni Moda", serif;
+}
+
+.font-logo {
+  font-family: "Bodoni Moda", serif;
+}
+
+[dir="rtl"] .font-logo,
+[dir="rtl"] .font-display,
+[dir="rtl"] .section-title {
+  font-family: "Noto Kufi Arabic", "Archivo", sans-serif;
+}
+
+.section-kicker {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin-top: 0.6rem;
+  max-width: 45rem;
+  color: var(--ink);
+  font-family: "Bodoni Moda", serif;
+  font-size: 2.55rem;
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.fabric-noise {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+.product-weave {
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mix-blend-mode: soft-light;
+}
+
+.editorial-grid {
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 10, 10, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.editorial-grain {
+  background-image:
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.24) 0 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 7px 7px, 34px 34px;
+  mix-blend-mode: soft-light;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 3.35rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 4.25rem;
+  }
+}
